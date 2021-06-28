@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 //step 2 import httpClient
 import { HttpClient } from '@angular/common/http';
+import { Photos } from '../interfaces/photos';
 
 @Injectable({
   providedIn: 'root'
@@ -18,10 +19,10 @@ export class PhotoFetchingService {
   }
 
   getPhoto() {
-    return this.http.get('https://api.unsplash.com/photos/random', {
+    return this.http.get <Photos> ('https://api.unsplash.com/photos/random', {
       //we step 2 part 4 - we are going to use headers
       headers: {
-        Authorization: 'Client-ID eLYc0iW_RXJwVLa0BNNI4zlX4QK8lWxuTS-jaNHYBwY'
+        Authorization: 'Client-ID xF3boNWFEMwXSnLb7BIPVXU0kFdC8a51zQJBDMOouCY'
       }
     });
   }

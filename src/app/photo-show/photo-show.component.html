@@ -4,5 +4,14 @@
   </div>
   <div class="card-body">
     <!-- step 3 - make the UI to show the random photo-->
+    <!-- property binding -->
+    <img *ngIf = "photoUrl" [src] = "photoUrl" class="img-thumbnail" />
+  </div>
+  <div class="card-footer">
+    <button
+          (click)="randomImage()"
+          class="btn-secondary text-center">
+          Find Random Image
+    </button>
   </div>
 </div>
