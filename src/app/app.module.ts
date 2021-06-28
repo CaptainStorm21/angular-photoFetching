@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PhotoShowComponent } from './photo-show/photo-show.component';
 
+//Step 1 - import http module
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,6 +16,7 @@ import { PhotoShowComponent } from './photo-show/photo-show.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     NgbModule
   ],
